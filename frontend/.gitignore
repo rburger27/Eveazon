@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#senitive information IE Passwords and login or connection info.
+node_modules/
+.env

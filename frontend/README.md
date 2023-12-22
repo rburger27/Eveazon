@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# EVEAzon Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EVEAzon is a web application designed for EVE Online players to streamline the process of placing purchase orders and interacting with a dedicated team of haulers.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **SSO Authentication:** Securely log in with EVE Online Single Sign-On.
+- **Purchase Orders:** Place and manage purchase orders.
+- **Shipping Calculator:** Calculate shipping costs for your orders.
+- **Price Checker:** Check prices for items in the EVE Online universe.
+- **Buyback Contract Generator:** Generate contracts for selling items back to the corporation.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Set up EVE Online Developer Application:
 
-### `npm run build`
+Before running the EVEAzon web app, you need to set up a developer application on the EVE Online Developer Portal to obtain the necessary credentials.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Go to [EVE Online Developers](https://developers.eveonline.com/).
+- Create a new application and note the Client ID and Secret Key.
+- Set the Redirect URI to the route where your web app will handle EVE Online SSO callbacks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Configure Environment Variables:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In the `backend` directory, create a `.env` file with the following content:
 
-### `npm run eject`
+```plaintext
+# MongoDB URI (replace with your actual MongoDB URI)
+MONGODB_URI=mongodb+srv://your_username:your_password@your_cluster.mongodb.net/your_database
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Replace your_username, your_password, your_cluster, your_database, your_eve_sso_client_id, and your_eve_sso_client_secret with your actual MongoDB and EVE Online SSO credentials.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## EVE Online SSO credentials:
+EVE_SSO_CLIENT_ID=your_eve_sso_client_id
+EVE_SSO_CLIENT_SECRET=your_eve_sso_client_secret
+EVE_SSO_REDIRECT_URI=http://localhost:5000/auth/callback  # Adjust to match your redirect URI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Run the APPlication:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Navigate to the backend directory
+cd backend
 
-## Learn More
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Run the backend server
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Open a new terminal and navigate to the frontend directory
+cd frontend
 
-### Code Splitting
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Run the frontend app
+npm start
 
-### Analyzing the Bundle Size
+The application will be accessible at http://localhost:3000. Click the "Log in with EVE Online" button to initiate the EVE Online SSO login process.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Contributing:
 
-### Making a Progressive Web App
+If you'd like to contribute to this project, please follow the [Contribution Guidelines](CONTRIBUTING.md).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Special thanks to CCP, The EVE ONLINE COMUNITY, My Corp (C5 FLight (C5-F))

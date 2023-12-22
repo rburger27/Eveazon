@@ -28,7 +28,7 @@ Before running the EVEAzon web app, you need to set up a developer application o
 
 In the `backend` directory, create a `.env` file with the following content:
 
-```plaintext
+//```plaintext
 # MongoDB URI (replace with your actual MongoDB URI)
 MONGODB_URI=mongodb+srv://your_username:your_password@your_cluster.mongodb.net/your_database
 

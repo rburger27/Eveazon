@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     // Replace with your backend API endpoint
-    axios.get('http://localhost:5000/api/data')
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/example`)
       .then(response => {
         setData(response.data);
       })
